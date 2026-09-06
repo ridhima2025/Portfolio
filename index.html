@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Carter | CS Student</title>
+    <!-- FontAwesome for comfy, clean logos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Color Palette & Variables */
+        :root {
+            --bg-color: #faf9f6; /* Soft off-white/cream */
+            --text-main: #2c2c2c;
+            --text-muted: #6b6b6b;
+            --btn-bg: #ffffff;
+            --btn-border: #eaeaea;
+            --btn-hover: #f3f3f3;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 4rem 1.5rem;
+        }
+
+        /* Constrain width for the Linktree look */
+        .container {
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.2rem;
+            border: 3px solid #ffffff;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+        }
+
+        .name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            letter-spacing: -0.5px;
+        }
+
+        .bio {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: var(--btn-bg);
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            border-radius: 50px; /* Gives the soft, comfy pill shape */
+            font-size: 1rem;
+            font-weight: 500;
+            border: 1px solid var(--btn-border);
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .link-btn:hover {
+            background-color: var(--btn-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .link-btn i {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            transition: color 0.25s ease;
+        }
+
+        .link-btn:hover i {
+            color: var(--text-main);
+        }
+
+        /* Simple state for the JS fade-in */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container fade-in">
+        <!-- SVG Placeholder for the profile picture -->
+        <svg class="profile-pic" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+            <rect width="150" height="150" fill="#e0e0e0"/>
+            <circle cx="75" cy="65" r="30" fill="#bdbdbd"/>
+            <path d="M 25 150 C 25 110, 125 110, 125 150 Z" fill="#bdbdbd"/>
+        </svg>
+        
+        <h1 class="name">Alex Carter</h1>
+        <p class="bio">CS Undergrad @ State University 🎓<br>Building cool web apps, learning AI, and running on too much coffee ☕</p>
+        
+        <div class="links">
+            <a href="https://github.com/alexcarter-student" target="_blank" class="link-btn">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://linkedin.com/in/alexcarter-student" target="_blank" class="link-btn">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://twitter.com/alexcarter_dev" target="_blank" class="link-btn">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a href="https://instagram.com/alexcarter_campus" target="_blank" class="link-btn">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Subtle fade-in animation when the page loads
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.querySelector('.fade-in');
+            
+            // Add a slight delay before triggering the animation 
+            // for a smoother, premium feel.
+            setTimeout(() => {
+                container.classList.add('visible');
+            }, 150);
+        });
+    </script>
+</body>
+</html>
+
