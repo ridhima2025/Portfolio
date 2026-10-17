@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ridhima Kaintura | CSE (Data Science)</title>
-    <!-- FontAwesome for comfy, clean logos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Color Palette & Variables */
         :root {
-            --bg-color: #faf9f6; /* Soft off-white/cream */
+            --bg-color: #faf9f6; 
             --text-main: #2c2c2c;
             --text-muted: #6b6b6b;
             --btn-bg: #ffffff;
@@ -35,7 +33,6 @@
             padding: 4rem 1.5rem;
         }
 
-        /* Constrain width for the Linktree look */
         .container {
             width: 100%;
             max-width: 420px;
@@ -82,7 +79,7 @@
             color: var(--text-main);
             text-decoration: none;
             padding: 1rem 1.5rem;
-            border-radius: 50px; /* Gives the soft, comfy pill shape */
+            border-radius: 50px; 
             font-size: 1rem;
             font-weight: 500;
             border: 1px solid var(--btn-border);
@@ -106,7 +103,6 @@
             color: var(--text-main);
         }
 
-        /* Simple state for the JS fade-in */
         .fade-in {
             opacity: 0;
             transform: translateY(15px);
@@ -136,12 +132,10 @@
     </div>
 
     <script>
-        // Subtle fade-in animation when the page loads
         document.addEventListener("DOMContentLoaded", () => {
             const container = document.querySelector('.fade-in');
             
-            // Add a slight delay before triggering the animation 
-            // for a smoother, premium feel.
+        
             setTimeout(() => {
                 container.classList.add('visible');
             }, 150);
